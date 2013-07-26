@@ -24,7 +24,7 @@ module AnyBase
   def self.decode( string, keys )
     ring = DECODER[keys]
     base = keys.length
-    string.reverse.chars.with_index.inject(0) do |sum,(char,i)|
+    string.reverse.chars.each_with_index.inject(0) do |sum,(char,i)|
       if ring[char] != nil
         sum + ring[char] * base**i
       end
