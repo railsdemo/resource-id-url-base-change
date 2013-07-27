@@ -1,5 +1,5 @@
 ResourceIdUrlBaseChange::Application.routes.draw do
-  resources :locations
+  resources :locations, except: :destroy
 
   root to: "pages#home"
 end
