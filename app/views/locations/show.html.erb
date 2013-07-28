@@ -5,5 +5,15 @@
   <%= @location.name %>
 </p>
 
+<p>
+  <strong>Base 28 ID:</strong>
+  <%= @location.encoded_id %>
+</p>
+
+<p>
+  <strong>Base 10 ID (database):</strong>
+  <%= @location.id %>
+</p>
+
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>

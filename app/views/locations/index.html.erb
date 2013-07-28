@@ -4,6 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Base 28 ID</th>
+      <th>Base 10 ID <br>(database)</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -13,6 +16,8 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= location.name %></td>
+        <td><%= location.encoded_id %></td>
+        <td><%= location.id %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
       </tr>
